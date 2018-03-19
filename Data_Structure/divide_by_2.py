@@ -15,3 +15,6 @@ def divide_by_2(dec_number):
 
 
 print(divide_by_2(42))
+print(divide_by_2(17))
+print(divide_by_2(45))
+print(divide_by_2(96))
