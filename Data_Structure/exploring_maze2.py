@@ -117,10 +117,10 @@ def search_from(maze,start_row,start_column):
         return True
     maze.update_position(start_row,start_column,TRIED)
     # Otherwise,use logical short circuiting to try each direction in turn (if needed)
-    found=search_from(maze,start_row-1,start_column) or \
-    search_from(maze,start_row+1,start_column) or \
-    search_from(maze,start_row,start_column-1) or \
-    search_from(maze,start_row,start_column+1)
+    found=search_from(maze,start_row,start_column-1) or \
+    search_from(maze,start_row,start_column+1) or \
+    search_from(maze,start_row-1,start_column) or \
+    search_from(maze,start_row+1,start_column)
     if found:
         maze.update_position(start_row,start_column,PART_OF_PATH)
     else:
